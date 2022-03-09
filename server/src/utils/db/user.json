@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "first_name": "Mariette",
+        "last_name": "Tearney",
+        "email": "mtearney0@creativecommons.org",
+        "gender": "Female",
+        "username": "mtearney0",
+        "password": "DLCcs2EMY"
+    }, 
+    {
+        "id": 2,
+        "first_name": "Anna-diana",
+        "last_name": "Hoffmann",
+        "email": "ahoffmann1@reddit.com",
+        "gender": "Male",
+        "username": "ahoffmann1",
+        "password": "P8lyH81r"
+    }, 
+    {
+        "id": 3,
+        "first_name": "Hallie",
+        "last_name": "Boyer",
+        "email": "hboyer2@google.ru",
+        "gender": "Female",
+        "username": "hboyer2",
+        "password": "I7KBsl"
+    }, 
+    {
+        "id": 4,
+        "first_name": "Swen",
+        "last_name": "Caldairou",
+        "email": "scaldairou3@joomla.org",
+        "gender": "Male",
+        "username": "scaldairou3",
+        "password": "AWMqBFNq73"
+    }, 
+    {
+        "id": 5,
+        "first_name": "Adrea",
+        "last_name": "Laurenty",
+        "email": "alaurenty4@desdev.cn",
+        "gender": "Male",
+        "username": "alaurenty4",
+        "password": "CBD1IU3sbq"
+    }
+]
