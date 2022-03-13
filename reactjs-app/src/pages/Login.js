@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import './../assets/css/App.css';
 import { useDispatch } from "react-redux";
-import { login } from "../features/userSlice";
+// import { login } from "../reducers/userSlice";
 
 const Login = () => {
     const user = {
@@ -16,11 +16,11 @@ const Login = () => {
 
     function submitLogin() {
 
-        dispatch(login({
-            email: email,
-            password: password,
-            isLogged: true
-        }));
+        // dispatch(login({
+        //     email: email,
+        //     password: password,
+        //     isLogged: true
+        // }));
 
         if (email.toLowerCase() === user.email && password.toLowerCase() === user.password) {
             alert("Login successful!");
