@@ -97,10 +97,10 @@ i .fa-envelope, i .fa-lock {
     font-size: 20px;
 }
 
-input#role, input#status {
-    /* margin: 10px 15px; */
-    margin: 5px 15px;
-}
+/* input#role, input#status {
+    margin: 0px;
+    display: flex;
+} */
 
 /* .stt-class {
     margin: 10px 15px;
@@ -177,7 +177,7 @@ table#tab-users {
     position: relative;
     border-collapse: collapse;
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
     border: 1px solid #232225;
 }
 
@@ -263,37 +263,37 @@ p#Active {
     font-weight: bold;
 }
 
-.btnDetail, .btnEdit {
-    color: black;
-}
-
-.btnDetail:hover, 
-.btnEdit:hover, 
-.btnDetail:focus, 
-.btnEdit:focus {
-    color: #FA8B3B;
-}
-
-.btnDel {
+.btnDel, .btnDetail, .btnEdit {
     background: inherit;
     border: none;
 }
 
-.btnDel:hover, .btnDel:focus {
+.btnDel:hover, .btnDel:focus,
+.btnDetail:hover, .btnEdit:hover, 
+.btnDetail:focus, .btnEdit:focus {
     background: inherit;
     border: none;
-    padding-top: 5px;
     color: #FA8B3B;
 }
 
 /* Modal Box */
-.modal-class {
+.modal-class, .detail-class {
     position: fixed;
     width: 100%;
     height: 100%;
     left: 0%;
     right: 0%;
-    background-color: rgba(95, 93, 93, 0.4);;
+    top: 0%;
+    background-color: rgba(51, 50, 50, 0.4);;
+}
+
+.container#c-modal, .container#modaldetail {
+    width: fit-content;
+    height: fit-content;
+}
+
+.container#modaldetail {
+    margin-top: 10%;
 }
 
 .modal-box {
@@ -301,32 +301,25 @@ p#Active {
     width: fit-content;
     height: fit-content;
     background-color: #fff;
-    top: 20%;
-    left: 20%;
+    top: 15%;
+    left: 34%;
     padding: 10px;
 }
 
 div .modal-title {
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 100%;
     height: 70px;
     border-bottom: 5px solid #444449;
 }
 
-div .col-md-3 {
-    width: 80%;
-    margin-left: 15px;
+#modal-select, .row {
+    display: flex;
 }
 
-div .col-md-8 {
-    width: 75%;
-}
-
-div .col-md-7 {
-    width: 55%;
-    margin-left: 82px;
-    margin-top: 12px;
+.row#row {
+    width: 100%;
 }
 
 .modal-text {
@@ -355,10 +348,16 @@ div .col-md-7 {
     padding: 10px;
     width: 100%;
     height: fit-content;
-    font-size: 10px;
+    font-size: 12px;
 }
 
-.modal-frm-control, .col-md-8#modal-select {
+.modal-frm-control {
+    display: flex;
+    width: 50%;
+    margin: 10px 0px;
+}
+
+.col-md-8#modal-select {
     display: flex;
     margin: 10px 0px;
 }
@@ -372,7 +371,7 @@ div .col-md-7 {
     margin: 0px 5px 5px 5px;
     width: 100%;
     height: 80%;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .modal-frm-control input:hover,
@@ -384,7 +383,7 @@ div .col-md-7 {
     margin: 0px 5px 5px 5px;
     width: 100%;
     height: 80%;
-    font-size: 10px;
+    font-size: 12px;
     outline: none;
 }
 
@@ -393,62 +392,19 @@ div .col-md-7 {
     display: flex;
     justify-content: end;
     margin: 10px 0px;
+    width: 100%;
 }
 
 .modal-frm-text {
-    margin-right: 10px;
+    width: 100px;
+    padding: 10px;
+    margin-right: 0px;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .s-modal-select {
     display: grid;
-}
-
-@media only screen and (min-width: 365px) {
-    /* .modal-frm-text {
-        margin-right: 0px;
-        font-weight: bold;
-        font-size: 10px;
-    }
-
-    .modal-frm-control input {
-        border: none;
-        background: none;
-        border-bottom: 2px solid gray;
-        padding: 3px;
-        margin: 0px 5px 5px 5px;
-        width: fit-content;
-        height: 80%;
-        font-size: 10px;
-    }
-
-    .modal-frm-control input:hover,
-    .modal-frm-control input:focus {
-        border: none;
-        background: none;
-        border-bottom: 2px solid #FA8B3B;
-        padding: 3px;
-        margin: 0px 5px 5px 5px;
-        width: fit-content;
-        height: 80%;
-        font-size: 10px;
-        outline: none;
-    } */
-
-    .col-md-8#modal-select {
-        display: grid;
-        margin: 10px 0px;
-        font-size: 8px;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .col-md-8#modal-select {
-        display: flex;
-        margin: 10px 0px;
-        font-size: 8px;
-    }
 }
 
 select#role, select#status,
@@ -459,7 +415,7 @@ select#ward {
     margin-top: 5px;
     color: black;
     border: 2px solid gray;
-    font-size: 10px;
+    font-size: 12px;
     width: 120px;
     height: 35px;
     text-align: center;
@@ -477,7 +433,7 @@ select#ward:focus {
     color: black;
     border: none;
     border: 2px solid #FA8B3B;
-    font-size: 10px;
+    font-size: 12px;
     width: 120px;
     height: 35px;
     outline: none;
@@ -487,20 +443,20 @@ select#ward:focus {
 textarea#note {
     width: 100%;
     height: 50px;
-    font-size: 10px;
+    font-size: 12px;
     outline: none;
 }
 
 textarea#note:focus {
     width: 100%;
     height: 50px;
-    font-size: 10px;
+    font-size: 12px;
     outline: none;
     border: 1px solid #FA8B3B;
 }
 
 .mess-error {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 0px;
     color: crimson;
     display: flex;
@@ -520,7 +476,7 @@ button#submitAdd {
     border: 2px solid #E66717;
     border-radius: 30px;
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     margin: 0px 5px;
     width: 65px;
     height: 30px;
@@ -533,7 +489,7 @@ button#submitAdd:focus {
     border: 2px solid #444449;
     border-radius: 30px;
     color: #E66717;
-    font-size: 10px;
+    font-size: 12px;
     margin: 0px 5px;
     width: 65px;
     height: 30px;
@@ -545,7 +501,7 @@ button#cancelAdd {
     border: 2px solid rgb(35, 34, 37);
     border-radius: 30px;
     color: rgb(35, 34, 37);
-    font-size: 10px;
+    font-size: 12px;
     margin: 0px 5px;
     width: 65px;
     height: 30px;
@@ -558,9 +514,53 @@ button#cancelAdd:focus {
     border: 2px solid #232225;
     border-radius: 30px;
     color: #E66717;
-    font-size: 10px;
+    font-size: 12px;
     margin: 0px 5px;
     width: 65px;
     height: 30px;
+}
+
+/* Modal Detail */
+.row#rowdetail .col-md-6 {
+    padding: 15px;
+    display: grid;
+}
+
+.col-md-6 .row {
+    display: flex;
+}
+
+.img-class {
+    width: fit-content;
+    height: fit-content;
+}
+
+.img-user, img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 22px 55px;
+}
+
+.name-text {
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.col-md-6 .row input, 
+.col-md-6 .row input:hover,
+.col-md-6 .row input:focus  {
+    border: none;
+    background: none;
+    border-bottom: 2px solid gray;
+    padding: 3px;
+    margin: 0px 5px 5px 5px;
+    /* width: 100%;
+    height: 80%; */
+    font-size: 14px;
+    text-align: start;
+    color: #E66717;
+    outline: none;
 }
 
