@@ -13,8 +13,8 @@ const TableUser = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getAllUser())
-    },[users]);
-    // console.log('User data', users);
+    },[dispatch]);
+    console.log('User data', users);
 
     const [openModal, setOpenModal] = useState(false);
     const isOpenning = () => setOpenModal(true);

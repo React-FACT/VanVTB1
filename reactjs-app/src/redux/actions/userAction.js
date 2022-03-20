@@ -7,16 +7,16 @@ import {
     DELETE_USER
 } from './../type';
 
-export const getAllUser = () => async () => {
+export const getAllUser = () => {
     return {
         type: GET_ALL_USER
     }
 };
 
-export const receiveAllUser = () => async (data) => {
+export const receiveAllUser = () => (payload) => {
     return {
         type: GET_ALL_USER_SUCCESS,
-        payload: data
+        payload
     }
 };
 

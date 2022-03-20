@@ -11,8 +11,8 @@ instance.interceptors.request.use(async (http) => {
     return http;
 });
 
-export const fetchAllUser = () => (
-    instance.get(`${apiURL}/user`)
+export const fetchAllUser = async () => (
+    await instance.get(`${apiURL}/user`)
 );
 
 export const fetchUserbyID = async (id) => (
